@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/41f4571c87.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Health Record</title>
+    <link rel="stylesheet" href="health_record.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+
+  <body>
+    
+    <div id="log"></div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
+
+<script type="module">
+  let header = document.getElementById("header");
+  import navbar from "./navbar_before_login.js";
+  header.innerHTML = navbar();
+
+  let foot = document.getElementById("lastPart");
+  import footer from "./footerF.js";
+  foot.innerHTML = footer();
+
+  let log = document.getElementById("log");
+  import login from "./import_login.js";
+  log.innerHTML = login();
+</script>

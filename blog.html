@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="Blog.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="stylesheet" href="footerF.css">
+  </head>
+  <body>
+    <h1>AMBULANCE ON THE WAY!!</h1>
+    <div class="box">
+      <div class="head">
+        <p>Welcome to HealHub Ambulance Service, where every second counts in saving lives and delivering compassionate care. With a fleet of state-of-the-art ambulances and a team of dedicated medical professionals, we're your trusted partner in emergencies, providing swift response and expert medical assistance when you need it most. From critical care transports to urgent medical transfers, we're here to ensure your safety and well-being on every journey. When seconds matter, count on us to be your beacon of hope and healing.</p>
+      </div>
+      <img src="./images/ambulance.jpg">
+      <div class="cont">
+        <h3>In the heat of the moment, trust our hotline to be your lifeline. For emergencies, dial us up at <a href="108">108</a> and let our team spring into action! </h3>
+        <h5>Count on us to race to your side in mere moments. Your ambulance, swift as lightning, will be there before you know it.</h5>
+      </div>
+    </div>
+
+    <!-- Adding Footer -->
+
+    <div id="lastPart"></div>
+</div>
+
+<!-- For slider -->
+
+
+<script>
+    let images = [
+      "https://newassets.apollo247.com/cms/2022-01/omicron-Hero-Banner_1.jpg",
+      "https://newassets.apollo247.com/cms/2021-12/winterbanner.jpg",
+      "https://newassets.apollo247.com/cms/2022-01/calendarbannerfinal.jpg",
+    ];
+    let container12 = document.getElementById("container12");
+    function start() {
+      let count = 0;
+      setInterval(function () {
+        container12.innerHTML = null;
+        if (count === images.length) {
+          count = 0;
+        }
+        let img = document.createElement("img");
+        img.src = images[count];
+        container12.append(img);
+        count++;
+      }, 2000);
+    }
+    start();
+  </script>
+</html>
+<!--  -->
+
+
+    <script src="Blog.js"></script>
+  </body>
+</html>
+
+<script type="module">
+  let header = document.getElementById("header");
+  import navbar from "./navbar_before_login.js";
+  header.innerHTML = navbar();
+
+  let foot = document.getElementById("lastPart");
+  import footer from "./footerF.js";
+  foot.innerHTML = footer();
+</script>
